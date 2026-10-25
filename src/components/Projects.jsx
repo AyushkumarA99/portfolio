@@ -17,7 +17,6 @@ import {
   Cpu,
   Monitor,
 } from 'lucide-react';
-import { Github } from './Icons';
 
 const quickTools = [
   { name: 'Word Counter', icon: FileText, desc: 'Real-time text analysis: words, characters, sentences, paragraphs, reading time.' },
@@ -130,16 +129,6 @@ export default function Projects() {
                 >
                   <ExternalLink className="w-4 h-4 text-obsidian" />
                   <span>Live Demo</span>
-                </a>
-
-                <a
-                  href="https://github.com/AyushkumarA99/quicktoolhub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="clip-chamfer inline-flex items-center gap-2 px-5 py-3 bg-obsidian-panel border border-primary/40 text-primary hover:border-primary hover:bg-obsidian-card font-label-code text-xs sm:text-sm font-bold uppercase tracking-wider active:scale-95 transition-all"
-                >
-                  <Github className="w-4 h-4 text-primary" />
-                  <span>View Source Code</span>
                 </a>
               </div>
             </div>
@@ -258,7 +247,19 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Honest Status Note - No fake live demo/repo */}
+              <div className="pt-2">
+                <a
+                  href="https://ayushportfolio11-11.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="clip-chamfer inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-primary to-primary-fixed-dim text-obsidian font-label-code text-xs sm:text-sm font-bold uppercase tracking-wider shadow-[0_0_20px_rgba(0,240,255,0.35)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] active:scale-95 transition-all"
+                >
+                  <ExternalLink className="w-4 h-4 text-obsidian" />
+                  <span>Live Demo</span>
+                </a>
+              </div>
+
+              {/* Current System Status */}
               <div className="p-3 rounded-lg bg-obsidian-panel border border-outline-variant flex items-center justify-between text-xs font-mono">
                 <div className="flex items-center gap-2 text-primary">
                   <span className="w-2 h-2 rounded-full bg-primary animate-ping" />
