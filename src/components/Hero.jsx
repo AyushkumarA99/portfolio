@@ -115,7 +115,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/assets/Ayush_Kumar_Resume.pdf"
+              href="./assets/Ayush_Kumar_Resume.pdf"
               download="Ayush_Kumar_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"

@@ -41,6 +41,7 @@ function netlifyFunctionsDev() {
 }
 
 export default defineConfig({
+  base: './',
   plugins: [react(), netlifyFunctionsDev()],
   server: {
     port: 5173,

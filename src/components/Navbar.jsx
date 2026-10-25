@@ -140,7 +140,7 @@ export default function Navbar() {
           {/* Action Button: Download Resume */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="/assets/Ayush_Kumar_Resume.pdf"
+              href="./assets/Ayush_Kumar_Resume.pdf"
               download="Ayush_Kumar_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -155,7 +155,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle Button */}
           <div className="flex items-center gap-2 lg:hidden">
             <a
-              href="/assets/Ayush_Kumar_Resume.pdf"
+              href="./assets/Ayush_Kumar_Resume.pdf"
               download="Ayush_Kumar_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -219,7 +219,7 @@ export default function Navbar() {
           {/* Mobile Drawer Resume & Telemetry Action */}
           <div className="flex flex-col gap-3 pt-4 border-t border-outline-variant/40" onClick={(e) => e.stopPropagation()}>
             <a
-              href="/assets/Ayush_Kumar_Resume.pdf"
+              href="./assets/Ayush_Kumar_Resume.pdf"
               download="Ayush_Kumar_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
