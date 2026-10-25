@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #05070d;
+    color: #d6e5ed;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #00f0ff;
+    outline-offset: 3px;
+  }
+}
+
+/* Tactical Background & Utility Styles */
+.tactical-grid {
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.035) 1px, transparent 1px);
+}
+
+.perspective-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(167, 139, 250, 0.04) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+}
+
+.clip-chamfer {
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.clip-tag {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+.clip-card-corner {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+
+/* HUD brackets */
+.hud-bracket {
+  position: relative;
+}
+
+.hud-bracket::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 1.5px solid #00f0ff;
+  border-left: 1.5px solid #00f0ff;
+  pointer-events: none;
+}
+
+.hud-bracket::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1.5px solid #00f0ff;
+  border-right: 1.5px solid #00f0ff;
+  pointer-events: none;
+}
+
+.hud-bracket-amber::before {
+  border-top-color: #ffd166;
+  border-left-color: #ffd166;
+}
+.hud-bracket-amber::after {
+  border-bottom-color: #ffd166;
+  border-right-color: #ffd166;
+}
+
+.hud-bracket-violet::before {
+  border-top-color: #a78bfa;
+  border-left-color: #a78bfa;
+}
+.hud-bracket-violet::after {
+  border-bottom-color: #a78bfa;
+  border-right-color: #a78bfa;
+}
+
+/* Glassmorphism surfaces */
+.glass-panel {
+  background: rgba(9, 13, 22, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow: 0 8px 32px -2px rgba(0, 240, 255, 0.12);
+}
+
+/* Custom cyber scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05070d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a273b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
